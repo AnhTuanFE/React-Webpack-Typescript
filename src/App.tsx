@@ -1,17 +1,28 @@
-import { FC, useState } from 'react'
-import reactlogo from './assets/images/react.svg'
+import { FC } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import UserPage from './pages/UserPage'
 import './assets/styles/app.css'
 import './assets/styles/app.scss'
 
 const App: FC = () => {
-  const [fullname] = useState('Dư Thanh Được')
-  console.log(fullname)
   return (
-    <div>
-      <img src={reactlogo} alt='React Logo' width={100} height={100} />
-      <h1>{fullname}</h1>
-      <h2>Bài viết được viết tại blog {process.env.HOST}</h2>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/user' element={<UserPage />} />
+
+        {/* <Route path="about">
+                    <Route index element={<AboutPage />} />
+                    <Route path=":number" element={<AboutPage />} />
+                </Route>
+                <Route path="test" element={<TestPage />} />
+                <Route path="layout" element={<LayoutComponent />}>
+                    <Route index element={<AboutPage />} />
+                    <Route path=":number" element={<AboutPage />} />
+                </Route> */}
+      </Routes>
+    </BrowserRouter>
   )
 }
 
