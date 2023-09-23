@@ -50,6 +50,12 @@ module.exports = {
         printWidth: 120,
         jsxSingleQuote: true
       }
+    ],
+    'import/no-unresolved': [
+      'error',
+      {
+        ignore: ['^~']
+      }
     ]
   }
 }

@@ -593,8 +593,16 @@ video {
   height: 50vh;
 }
 
+.h-\[20vh\] {
+  height: 20vh;
+}
+
 .w-full {
   width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .justify-center {
